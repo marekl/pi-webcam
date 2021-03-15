@@ -22,9 +22,19 @@ config_txt_changes:
   # Enable USB OTG mode.
   - option: dtoverlay
     value: dwc2
+
   # Enable the camera.
   - option: start_x
     value: '1'
+
   # Ensure GPU has enough memory for camera.
   - option: gpu_mem
     value: '128'
+
+  # Set the Pi Zero ACT LED trigger to 'none'.
+  - option: dtparam=act_led_trigger
+    value: 'none'
+
+  # Turn off the Pi Zero ACT LED.
+  - option: dtparam=act_led_activelow
+    value: 'on'
